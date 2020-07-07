@@ -12,6 +12,8 @@ assert(not tableutils.subsetOf({"hello", "world"}, {"hello", "foo", "world"}, "i
 assert(not tableutils.subsetOf({"hello", "world"}, {"hello"}, "is not subset of"))
 
 assert(tableutils.matches({"hello", "world"}, {"hello", "world"}), "table values does not equal")
+x=1;y=0
+assert(not tableutils.matches({"world", "hello"}, {x="hello", y="world"}), "table values does not equal")
 assert(not tableutils.matches({"world", "hello"}, {"hello", "world"}), "table values does not equal")
 assert(not tableutils.matches({"hello", "world"}, {"hello"}), "table values does not equal")
 assert(not tableutils.matches({"hello"}, {"hello", "world"}), "table values does not equal")
